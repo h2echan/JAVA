@@ -1,0 +1,103 @@
+package find_false_image_game;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.*;
+import javax.swing.*;
+import find_false_image_game.rectangle;
+import java.awt.*;
+
+
+
+
+
+
+
+class drawRect{
+	
+	public void paint(Graphics g,rectangle rect) {
+		g.setColor(Color.red);
+		g.drawRect(rect.x, rect.y, rect.width, rect.height);
+	}
+}
+
+public class day1 extends JFrame {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame f = new JFrame();
+		f.setSize(300,200);
+		f.setLayout(null);
+	
+		JPanel panel = new JPanel();
+		f.add(panel);
+		rectangle rect = new rectangle();
+		
+		//키보드 입력받기
+		class key implements KeyListener{
+
+			public void keyPressed(KeyEvent e) {
+				//왼쪽버튼
+				if( e.getKeyCode() == 37 ) {
+					
+					rect.x=rect.x-5;
+					panel.add(rect);
+				}
+				//위쪽버튼
+                if( e.getKeyCode() == 38 ) {
+                	rect.height=rect.height+5;
+                	f.add(rect);
+                } 
+                //오른쪽버튼
+                if( e.getKeyCode() == 39 ) {
+                	rect.x=rect.x+5;
+                	f.add(rect);
+                } 
+                //아래버튼
+                if( e.getKeyCode() == 40 ){
+                	rect.height=rect.height-5;
+                	f.add(rect);
+                }  
+			}
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		}
+		f.setVisible(true);
+		f.addKeyListener(new key());
+	}
+
+}
+
+/*
+public class day1 extends JFrame {
+	
+	private MyPanel panel = new MyPanel();
+		public day1() {
+			setTitle("JPanel의 paintComponent() 예제");
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setContentPane(panel);
+			setSize(250,220);
+			setVisible(true);
+	}
+	class MyPanel extends JPanel {
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.setColor(Color.BLUE);
+			g.drawRect(10,10,50,50);
+			g.drawRect(50,50,50,50);
+			g.setColor(Color.MAGENTA);
+			g.drawRect(90,90,50,50);
+		}
+	}
+	public static void main(String [] args) {
+		new day1();
+	}
+}
+*/
+

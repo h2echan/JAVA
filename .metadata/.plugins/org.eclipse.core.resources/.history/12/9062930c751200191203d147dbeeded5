@@ -1,0 +1,12 @@
+package find_false_image_game;
+
+public class Frame {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Frame f= new Frame();
+		f.setTitle
+		
+	}
+
+}

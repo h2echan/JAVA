@@ -1,0 +1,100 @@
+package find_false_image_game;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.*;
+import javax.swing.*;
+import find_false_image_game.rectangle;
+import java.awt.*;
+
+
+class drawRect{
+	public void paint(Graphics g,rectangle rect) {
+		g.setColor(Color.red);
+		g.drawRect(rect.x, rect.y, rect.width, rect.height);
+	}
+}
+
+public class day1 extends JFrame implements KeyListener {
+	
+	JFrame f = new JFrame();
+	
+	rectangle rect = new rectangle();
+
+	//private MyPanel panel = new MyPanel();
+	//생성자
+	public day1() {
+			setTitle("JPanel의 paintComponent() 예제");
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			//setContentPane(panel);
+			setSize(250,220);
+			setVisible(true);
+			
+			addKeyListener(this);
+	}
+	
+	class MyPanel extends JPanel {
+		public void paintComponent(Graphics g) {
+			g.setColor(Color.red);
+			g.drawRect(rect.x, rect.y, rect.width, rect.height);
+		}
+	}
+	
+	public void deleteComponent(Graphics g) {
+		g.clearRect(rect.x, rect.y, rect.width, rect.height);
+	}
+	
+	public void paintComponent(Graphics g) {
+		g.setColor(Color.red);
+		g.drawRect(rect.x, rect.y, rect.width, rect.height);
+	}
+	
+	public void keyPressed(KeyEvent e) {
+		//왼쪽버튼
+		
+		if( e.getKeyCode() == 37 ) {
+			//deleteComponent(getGraphics());
+			repaint();
+			rect.x=rect.x-5;
+			System.out.println(rect.x);
+			paintComponent(getGraphics());
+			
+		}
+		//위쪽버튼
+        if( e.getKeyCode() == 38 ) {
+        	//deleteComponent(getGraphics());
+        	repaint();
+        	rect.y=rect.y-5;
+        	paintComponent(getGraphics());
+        } 
+        //오른쪽버튼
+        if( e.getKeyCode() == 39 ) {
+        	//deleteComponent(getGraphics());
+        	repaint();
+        	rect.x=rect.x+5;
+        	paintComponent(getGraphics());
+        } 
+        //아래버튼
+        if( e.getKeyCode() == 40 ){
+        	//deleteComponent(getGraphics());
+        	repaint();
+        	rect.y=rect.y+5;
+        	paintComponent(getGraphics());
+        }  
+	}
+	public void keyReleased(KeyEvent e) {
+		
+		
+	}
+	public void keyTyped(KeyEvent e) {
+		
+		
+	}
+	
+
+	public static void main(String [] args) {
+		new day1();
+	}
+
+}
+

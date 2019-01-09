@@ -1,0 +1,21 @@
+package find_false_image_game;
+import java.awt.Frame;
+
+public class rectangle_test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//Frame f = new Frame();
+		//창에 표시되는 제목
+		f.setTitle("사각형만들기~");
+		//창의 크기
+		f.setBounds(100,100,300,300);
+		//프레임의 경우 응용프로그램에 윈도우를 생성하기위해 사용
+		//기본적으로 타이틀,최소버튼,최대버튼,종료버튼 지원
+		//상위 클래스인 윈도우는 타이틀,메뉴가 지원되지않음
+		//기본적으로 화면에 안보이기때문에 setvisible을 true로 설정
+		f.setVisible(true);
+	}
+
+}

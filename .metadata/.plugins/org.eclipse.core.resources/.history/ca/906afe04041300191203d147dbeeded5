@@ -1,0 +1,15 @@
+package day2;
+import day2.file_io;
+import java.util.Random;
+
+public class main {
+
+	Random random = new Random();
+	int a=random.nextInt(7)+1;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(a);
+	}
+
+}

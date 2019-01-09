@@ -1,0 +1,11 @@
+package day2;
+import day2.file_io;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

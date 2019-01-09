@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;임의 폴더에서 이미지파일만 가져오기/src/day2&apos;&#x0D;&#x0A;- Original project: &apos;임의 폴더에서 이미지파일만 가져오기&apos;&#x0D;&#x0A;- Destination element: &apos;임의 폴더에서 이미지파일만 가져오기/src/day2&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     file_io.java&#x0D;&#x0A;     main.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;day2" element1="/src&lt;{file_io.java" element2="/src&lt;{main.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1546923967209" units="2" version="1.0"/>
+</session>

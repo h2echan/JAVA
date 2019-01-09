@@ -1,0 +1,63 @@
+package find_false_image_game;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.*;
+import javax.swing.*;
+import find_false_image_game.rectangle;
+
+
+public class day1 extends JFrame {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		JFrame f = new JFrame();
+		f.setSize(300,200);
+		f.setLayout(null);
+		
+		
+	
+		JPanel panel = new JPanel();
+		f.add(panel);
+		rectangle rect = new rectangle();
+		
+		//키보드 입력받기
+		class key implements KeyListener{
+
+			public void keyPressed(KeyEvent e) {
+				//왼쪽버튼
+				if( e.getKeyCode() == 37 ) {
+					rect.x=rect.x-5;
+					System.out.println(rect.x);
+				}
+				//위쪽버튼
+                if( e.getKeyCode() == 38 ) {
+                	rect.height=rect.height+5;
+                } 
+                //오른쪽버튼
+                if( e.getKeyCode() == 39 ) {
+                	rect.x=rect.x+5;
+                } 
+                //아래버튼
+                if( e.getKeyCode() == 40 ){
+                	rect.height=rect.height-5;
+                }  
+                
+			}
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		}
+		f.setVisible(true);
+		f.addKeyListener(new key());
+	}
+
+}
+
+
+
