@@ -62,6 +62,7 @@ public class main extends JFrame  {
 		g.drawOval(x, y, 50, 50);
 	}
 	
+	//MouseListener는 인터페이스고 추상메소드가 5개이기 때문에, 5개 메소드를 다 구현해야한다.
 	class Mouselistener implements MouseListener{
 		
 		@Override
